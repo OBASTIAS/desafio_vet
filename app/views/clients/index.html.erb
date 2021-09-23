@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Clients</h1>
+
+<table class="table">
+  <thead>
+    <tr class="text-center">
+      <th>Name</th>
+      <th>Phone number</th>
+      <th>Email</th>
+      <th>Total Pets</th>
+      <th>Pets</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody class="text-center">
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= link_to client.name, client %></td>
+        <td><%= client.phone_number %></td>
+        <td><%= client.email %></td>
+        <td><%= client.count_pets %></td>
+        <td class="text-right">
+          <% client.pets.each do |pet|%>
+            <li> <%= link_to pet.name, pet %></li> 
+          <% end %>
+        </td>
+        <td><%= link_to 'Edit', edit_client_path(client) %></td>
+        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client', new_client_path, class:"btn btn-danger" %>
+<%= link_to 'Home', root_path %>

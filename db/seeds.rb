@@ -6,18 +6,33 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+
+10.times do |i|
+
+    Client.create!(
+        name: Faker::Name.name ,
+        phone_number: Faker::PhoneNumber.cell_phone_in_e164  ,
+        email: Faker::Internet.email
+
+    )
+
+end
+
+clients = Client.all
 fechas = "01-01-2020".to_date.."20-09-2021".to_date
 fechas = fechas.to_a
+
+
 10.times do |i|
 
 
     Pet.create(
         name: Faker::Creature::Animal.name,
         race: Faker::Creature::Dog.breed,
-        birthdate: fechas.sample
-        
-    
+        birthdate: fechas.sample,
+        client_id: clients.sample.id
     )
 
-
 end
+

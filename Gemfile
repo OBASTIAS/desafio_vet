@@ -60,5 +60,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-#20-09-2021
+#20-09-2021 install gem faker
 gem 'faker'
+
+#22-09-2021 install bootstrap and jQuery-Rails
+gem 'bootstrap', '~> 5.1.0'
+gem 'jquery-rails'
