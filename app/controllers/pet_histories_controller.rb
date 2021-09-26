@@ -14,6 +14,8 @@ class PetHistoriesController < ApplicationController
   # GET /pet_histories/1
   # GET /pet_histories/1.json
   def show
+    
+    
   end
 
   # GET /pet_histories/new
@@ -55,6 +57,7 @@ class PetHistoriesController < ApplicationController
       if @pet_history.update(pet_history_params)
         format.html { redirect_to pet_pet_history_path(@pet,@pet_history), notice: 'Pet history was successfully updated.' }
         format.json { render :show, status: :ok, location: @pet_history }
+        
       else
         format.html { render :edit }
         format.json { render json: @pet_history.errors, status: :unprocessable_entity }

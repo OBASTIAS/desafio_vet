@@ -1,22 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @client.name %>
-</p>
 
-<p>
-  <strong>Phone number:</strong>
-  <%= @client.phone_number %>
-</p>
+<table class="table table-bordered text-center">
+  <thead class="bg-primary text-white">
+    <tr>
+      <th>Name:</th>
+      <th>Phone number:</th>
+      <th>Email:</th>
+    </tr>
+  </thead>
 
-<p>
-  <strong>Email:</strong>
-  <%= @client.email %>
-</p>
+  <tbody>
+    <tr>
+      <td><%= @client.name %> </td>
+      <td><%= @client.phone_number %> </td> 
+      <td><%= @client.email %></td>
+    </tr>
+  </tbody>
 
-<table>
-  <thead>
+</table>
+
+<table class="table table-bordered text-center">
+  <thead class="bg-primary text-white">
     <tr>
       <th>Name</th>
       <th>Altura Máx</th>

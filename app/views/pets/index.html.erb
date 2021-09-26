@@ -1,10 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Pets</h1>
 
-<table>
-  <thead>
-    <tr>
+
+
+
+
+<table class="table table-hover table-bordered">
+  <thead class="text-center">
+    <tr class="bg-primary text-white">
       <th>Name</th>
       <th>Race</th>
       <th>Birthdate</th>
@@ -16,7 +19,7 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="text-center">
     <% @pets.each do |pet| %>
       <tr>
       <td><%= link_to pet.name, pet %></td>
@@ -39,7 +42,4 @@
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Pet', new_pet_path %>
-<%= link_to 'New Client', clients_path %>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Unit7ChallengeVet</title>
+    <title>PetsLovers</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,28 @@
   </head>
 
   <body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#"><h1>Pets</h1></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+       <%= link_to 'Home', root_path, class:'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'New Pet', new_pet_path, class:'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'New Client', clients_path, class:'nav-link'%>
+      </li>
+      <li class="nav-item">
+        
+      </li>
+    </ul>
+  </div>
+</nav>
     <%= yield %>
   </body>
 </html>

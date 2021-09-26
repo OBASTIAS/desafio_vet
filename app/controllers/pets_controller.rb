@@ -21,6 +21,7 @@ class PetsController < ApplicationController
 
   # GET /pets/1/edit
   def edit
+    @client = Client.all
   end
 
   # POST /pets
